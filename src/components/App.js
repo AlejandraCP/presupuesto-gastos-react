@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Formulario from './Formulario';
+import Listado from './Listado';
 class App extends Component {
 
   state = {
@@ -31,7 +32,7 @@ class App extends Component {
             <Formulario addExpensesProps={this.addExpenses}/>
           </div>
           <div className='w-50 bg-white p-1 border-blue'>
-            <p>ipsum</p>
+            <Listado expenses={this.state.expenses}/>
           </div>
         </div>
       </div>
