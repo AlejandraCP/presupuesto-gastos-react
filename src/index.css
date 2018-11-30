@@ -21,5 +21,32 @@ code {
 .letter-white {
   color: aliceblue;
   font-size: 40px;
-  
+}
+
+.w-50{
+  width: 50%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.just-content-start {
+  justify-content: flex-start;
+}
+
+.bg-white {
+  background: white;
+}
+
+.letter-blue {
+  color: #12133a;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.border-blue {
+  border: 2px solid #12133a;
 }
