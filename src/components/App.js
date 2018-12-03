@@ -3,6 +3,7 @@ import Header from './Header';
 import Formulario from './Formulario';
 import Listado from './Listado';
 import { validarPresupuesto } from '../Helper';
+import BudgetControl from './BudgetControl';
 class App extends Component {
 
   state = {
@@ -21,7 +22,8 @@ class App extends Component {
     let valBudget = validarPresupuesto(budget);
     if(valBudget) {
       this.setState({
-        budget: valBudget
+        budget: valBudget,
+        residuary: valBudget
       })
     } else {
       this.getBudget();
@@ -33,11 +35,23 @@ class App extends Component {
     const expense = {...this.state.expenses};
 
     expense[`gasto${Date.now()}`] = expensesData;
+    this.subtractBudget(expensesData.quantitySpending)
 
     this.setState({
       expenses: expense
     })
+
+    
   }
+
+  subtractBudget = quantity => {
+    let residuary = parseInt(this.state.residuary) - parseInt(quantity);
+
+    this.setState({
+      residuary: residuary
+    })
+  }
+
 
   render() {
     const headerTitle = 'Gasto mensual'
@@ -52,6 +66,10 @@ class App extends Component {
           </div>
           <div className='w-50 bg-white p-1 border-blue'>
             <Listado expenses={this.state.expenses}/>
+            <BudgetControl 
+              budget={this.state.budget}
+              residuary={this.state.residuary} 
+            />
           </div>
         </div>
       </div>

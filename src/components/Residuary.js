@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import { revisarPresupuesto } from '../Helper';
 
 class Residuary extends Component {
     render() {
-        const headerTitle = 'Gasto mensual'
+        const residuary = this.props.residuary
+        const budget = this.props.budget
         return (
-            <div></div>
+            <div className={revisarPresupuesto(budget, residuary)}>
+                <p>Restante: S./ {residuary}</p>
+            </div>
             );
         }
     }

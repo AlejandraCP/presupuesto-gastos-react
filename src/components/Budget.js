@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 
 class Budget extends Component {
     render() {
-        const headerTitle = 'Gasto mensual'
         return (
-            <div></div>
+            <div>
+                <p>Presupuesto: S./ {this.props.budget}</p>
+            </div>
             );
         }
     }
