@@ -26,7 +26,7 @@ class Formulario extends Component {
 
                 <div className="">
                     <label>Cantidad</label>
-                    <input className="" type="text" ref={this.quantitySpending} placeholder="Ej. 300" />
+                    <input className="" type="number" ref={this.quantitySpending} placeholder="Ej. 300" />
                 </div>
 
                 <input className="" type="submit" value="Agregar" />

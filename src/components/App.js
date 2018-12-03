@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   getBudget() {
-    let budget = prompt('Enter budget');
+    let budget = prompt('Ingresar presupuesto');
     let valBudget = validarPresupuesto(budget);
     if(valBudget) {
       this.setState({

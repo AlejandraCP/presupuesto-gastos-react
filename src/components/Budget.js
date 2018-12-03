@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Budget extends Component {
-    render() {
-        return (
-            <div>
-                <p>Presupuesto: S./ {this.props.budget}</p>
-            </div>
-            );
-        }
-    }
+const Budget = props => {
+    return (
+        <div>
+                <p>Presupuesto: S./ {props.budget}</p>
+        </div>
+    )
+}
   
 export default Budget;
