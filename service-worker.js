@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/presupuesto-gastos-react/precache-manifest.2f967a3bbfb3ab1b04dfc45fb36fe9db.js"
+  "/presupuesto-gastos-react/precache-manifest.417b71b9232aa3c9b0d94ece0cb7ed92.js"
 );
 
 workbox.clientsClaim();
